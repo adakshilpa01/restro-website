@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shilpa's Kitchen | Pure Veg Restaurant</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif
+    }
+    body
+    {
+      background:#fff;
+      color:#333
+    }
+    header
+    {
+      background:#7b0000;
+      color:#fff;
+      position:sticky;
+      top:0;
+      z-index:10
+    }
+    nav
+    {
+      max-width:1200px;
+      margin:auto;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:15px
+    }
+    nav ul
+    {
+      list-style:none;
+      display:flex;
+      gap:25px
+    }
+    nav a{color:#fff;text-decoration:none;font-weight:500}
+    nav a:hover{text-decoration:underline}
+    .hero{height:85vh;background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092') center/cover no-repeat;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff}
+    .hero h1{font-size:48px;margin-bottom:15px}
+    .hero p{font-size:18px;margin-bottom:25px}
+    .btn{background:#e63946;color:#fff;padding:12px 25px;border-radius:30px;text-decoration:none;font-weight:600}
+    section{max-width:1200px;margin:auto;padding:70px 20px}
+    .title{text-align:center;margin-bottom:50px}
+    .title h2{font-size:36px;color:#7b0000}
+    .about{text-align:center;line-height:1.8}
+    .menu-grid
+    {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px
+    }
+    .menu-grid img
+    {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px
+    }
+    .card{background:#fff;border-radius:15px;padding:25px;box-shadow:0 10px 25px rgba(0,0,0,.1);transition:.3s}
+    .card:hover{transform:translateY(-5px)}
+    .card h3{color:#7b0000;margin-bottom:10px}
+    .price{font-weight:600}
+    .gallery
+    {
+      display:flex;
+      flex-wrap: wrap;
+      grid-gap: 20px
+    }
+    .gallery img
+    {
+      width:32%;
+      border-radius:15px
+
+    }
+    .contact{text-align:center}
+    footer{background:#7b0000;color:#fff;text-align:center;padding:20px}
+    .whatsapp{position:fixed;bottom:20px;right:20px;background:#25d366;color:#fff;padding:15px 22px;border-radius:50px;text-decoration:none;font-weight:600;box-shadow:0 8px 20px rgba(0,0,0,.3)}
+  </style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <h2>Shilpa's Kitchen</h2>
+    <ul>
+      <li><a href="home">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="hero" id="home">
+  <div>
+    <h1>Pure Veg Restaurant</h1>
+    <p>Homemade Taste • Fresh Ingredients • Hygienic Kitchen</p>
+    <a href="#menu" class="btn">View Menu</a>
+  </div>
+</div>
+
+<section id="about">
+  <div class="title"><h2>About Us</h2></div>
+  <p class="about">Welcome to <b>Shilpa's Kitchen</b>, where taste meets tradition. We serve delicious pure vegetarian food prepared with love, hygiene and authentic Indian flavours.</p>
+</section>
+
+<section id="menu">
+  <div class="title"><h2>Our Menu</h2></div>
+  <div class="menu-grid">
+    <div class="card"><img src="butter-paneer-masala-one-pot.jpg"><h3>Paneer Butter Masala</h3><p class="price"><center>₹250</center></p></div>
+    <div class="card"><h3>Veg Biryani</h3><p class="price">₹200</p></div>
+    <div class="card"><h3>Dal Fry</h3><p class="price">₹150</p></div>
+    <div class="card"><h3>Butter Naan</h3><p class="price">₹40</p></div>
+    <div class="card"><h3>Jeera Rice</h3><p class="price">₹120</p></div>
+    <div class="card"><h3>Special Thali</h3><p class="price">₹220</p></div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="title"><h2>Food Gallery</h2></div>
+  <div class="gallery">
+    <img src="burger-chips-dinner-70497.jpg">
+    <img src="food-dinner-lunch-461198.jpg">
+    <img src="4.jpg">
+    <img src="5.jpg">
+    <img src="6.jpg">
+    <img src="8.jpg">
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="title"><h2>Contact & Order</h2></div>
+  <p>📍 Delhi, India</p>
+  <p>📞 +91 9500359810</p>
+  <p>⏰ 10:00 AM – 10:30 PM</p>
+
+  <h3 style="margin-top:30px;">Quick Order Form</h3>
+  <form onsubmit="sendOrder(); return false;" style="max-width:400px;margin:20px auto;text-align:left;">
+    <label>Name</label><br>
+    <input id="name" required style="width:100%;padding:8px;margin-bottom:10px;"><br>
+    <label>Item Name</label><br>
+    <input id="item" required style="width:100%;padding:8px;margin-bottom:10px;"><br>
+    <label>Quantity</label><br>
+    <input id="qty" required style="width:100%;padding:8px;margin-bottom:15px;"><br>
+    <button type="submit" class="btn">Order on WhatsApp</button>
+  </form>
+</section>
+
+<section id="map">
+  <div class="title"><h2>Find Us</h2></div>
+  <iframe src="https://www.google.com/maps?q=India&output=embed" width="100%" height="300" style="border:0;border-radius:15px"></iframe>
+</section>
+
+<section id="reviews">
+  <div class="title"><h2>Customer Reviews</h2></div>
+  <div class="menu-grid">
+    <div class="card"><p>⭐⭐⭐⭐⭐</p><p>"Amazing taste, feels like home food."</p><b>- Riya</b></div>
+    <div class="card"><p>⭐⭐⭐⭐⭐</p><p>"Best pure veg restaurant in city."</p><b>- Amit</b></div>
+    <div class="card"><p>⭐⭐⭐⭐⭐</p><p>"Hygienic and delicious food."</p><b>- Neha</b></div>
+  </div>
+</section>
+
+<script>
+function sendOrder(){
+  var name=document.getElementById('name').value;
+  var item=document.getElementById('item').value;
+  var qty=document.getElementById('qty').value;
+  var msg=`Hello, my name is ${name}. I want to order ${item} (Qty: ${qty})`;
+  window.open(`https://wa.me/91XXXXXXXXXX?text=${encodeURIComponent(msg)}`,'_blank');
+}
+</script>
+
+<a class="whatsapp" href="https://wa.me/91XXXXXXXXXX?text=Hello%20I%20want%20to%20order%20food" target="_blank">💬 Order on WhatsApp</a>
+
+<footer>
+  <p>© 2026 Shilpa's Kitchen | Designed Professionally</p>
+</footer>
+
+</body>
+</html>
