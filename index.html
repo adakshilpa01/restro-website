@@ -74,7 +74,7 @@
     }
     .gallery img
     {
-      width:32%;
+      width:350px;
       border-radius:15px
 
     }
@@ -125,12 +125,12 @@
 <section id="gallery">
   <div class="title"><h2>Food Gallery</h2></div>
   <div class="gallery">
-    <img src="burger-chips-dinner-70497.jpg">
-    <img src="food-dinner-lunch-461198.jpg">
-    <img src="4.jpg">
-    <img src="5.jpg">
-    <img src="6.jpg">
-    <img src="8.jpg">
+    <img src="10.jpg">
+    <img src="11.jpg">
+    <img src="16.jpg">
+    <img src="13.jpg">
+    <img src="14.jpeg">
+    <img src="15.jpg">
   </div>
 </section>
 
@@ -148,6 +148,8 @@
     <input id="item" required style="width:100%;padding:8px;margin-bottom:10px;"><br>
     <label>Quantity</label><br>
     <input id="qty" required style="width:100%;padding:8px;margin-bottom:15px;"><br>
+     <label>Address</label><br>
+    <input id="Address" required style="width:100%;padding:8px;margin-bottom:15px;"><br>
     <button type="submit" class="btn">Order on WhatsApp</button>
   </form>
 </section>
@@ -172,11 +174,11 @@ function sendOrder(){
   var item=document.getElementById('item').value;
   var qty=document.getElementById('qty').value;
   var msg=`Hello, my name is ${name}. I want to order ${item} (Qty: ${qty})`;
-  window.open(`https://wa.me/91XXXXXXXXXX?text=${encodeURIComponent(msg)}`,'_blank');
+  window.open(`https://wa.me/918178006325?text=${encodeURIComponent(msg)}`,'_blank');
 }
 </script>
 
-<a class="whatsapp" href="https://wa.me/91XXXXXXXXXX?text=Hello%20I%20want%20to%20order%20food" target="_blank">💬 Order on WhatsApp</a>
+<a class="whatsapp" href="https://wa.me/918178006325?text=Hello%20I%20want%20to%20order%20food" target="_blank">💬 Order on WhatsApp</a>
 
 <footer>
   <p>© 2026 Shilpa's Kitchen | Designed Professionally</p>
