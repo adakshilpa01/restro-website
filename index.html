@@ -129,6 +129,44 @@
   background: #333;
 }
     .contact{text-align:center}
+    .whatsapp{
+      position:fixed;
+      bottom:20px;
+      right:20px;
+      background:#25D366;
+      color:#fff;
+      padding:14px 18px;
+      border-radius:50px;
+      text-decoration:none;
+      font-weight:bold;
+      box-shadow:0 5px 20px rgba(0,0,0,0.3);
+      z-index:20;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse{
+      0%{transform:scale(1);box-shadow:0 0 0 0 rgba(37,211,102,0.7);} 
+      70%{transform:scale(1.05);box-shadow:0 0 0 15px rgba(37,211,102,0);} 
+      100%{transform:scale(1);box-shadow:0 0 0 0 rgba(37,211,102,0);} 
+    }
+    .call-float{
+      position:fixed;
+      bottom:90px;
+      right:22px;
+      background:#22c55e;
+      color:#000;
+      width:55px;
+      height:55px;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:24px;
+      text-decoration:none;
+      box-shadow:0 5px 20px rgba(0,0,0,0.3);
+      z-index:20;
+      animation:pulse 1.5s infinite;
+    }
     footer{background:#7b0000;color:#fff;text-align:center;padding:20px}
     .whatsapp{position:fixed;bottom:20px;right:20px;background:#25d366;color:#fff;padding:15px 22px;border-radius:50px;text-decoration:none;font-weight:600;box-shadow:0 8px 20px rgba(0,0,0,.3)}
   </style>
@@ -185,7 +223,7 @@
     <img src="11.jpg" class="slide">
     <img src="13.jpg" class="slide">
     <img src="14.jpeg" class="slide">
-    <img src="15.jpg" class="slide">
+    <img src="17.jpg" class="slide">
     <img src="16.jpg" class="slide">
 
     <button class="prev" onclick="changeSlide(-1)">❮</button>
@@ -204,21 +242,21 @@
 
 <section id="contact" class="contact">
   <div class="title"><h2>Contact & Order</h2></div>
-  <p>📍 Delhi, India</p>
-  <p>📞 +91 9500359810</p>
-  <p>⏰ 10:00 AM – 10:30 PM</p>
+  <p><h4>📍 Delhi, India</h4></p>
+  <p><h4>📞 +91 8178006325</h4></p>
+  <p><h4>⏰ 10:00 AM – 10:30 PM</h4></p>
 
-  <h3 style="margin-top:30px;">Quick Order Form</h3>
+  <h2 style="margin-top:30px;">Quick Order Form</h2>
   <form onsubmit="sendOrder(); return false;" style="max-width:400px;margin:20px auto;text-align:left;">
-    <label>Name</label><br>
+    <label><b>Name</b></label><br>
     <input id="name" required style="width:100%;padding:8px;margin-bottom:10px;"><br>
-    <label>Item Name</label><br>
+    <label><b>Item Name</b></label><br>
     <input id="item" required style="width:100%;padding:8px;margin-bottom:10px;"><br>
-    <label>Quantity</label><br>
+    <label><b>Quantity</b></label><br>
     <input id="qty" required style="width:100%;padding:8px;margin-bottom:15px;"><br>
-     <label>Address</label><br>
+     <label><b>Address</b></label><br>
     <input id="Address" required style="width:100%;padding:8px;margin-bottom:15px;"><br>
-    <button type="submit" class="btn">Order on WhatsApp</button>
+    <center><button type="submit" class="btn">Order on WhatsApp</button></center>
   </form>
 </section>
 
@@ -278,7 +316,7 @@ function sendOrder(){
   }, 2000);
 </script>
 <a class="whatsapp" href="https://wa.me/918178006325?text=Hello%20I%20want%20to%20order%20food" target="_blank">💬 Order on WhatsApp</a>
-
+<a class="call-float" href="tel:+918178006325">📞</a>
 <footer>
   <p>© 2026 Shilpa's Kitchen | Designed Professionally</p>
 </footer>
